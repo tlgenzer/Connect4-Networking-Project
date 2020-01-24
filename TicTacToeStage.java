@@ -20,7 +20,8 @@ public class TicTacToeStage extends Stage
     private TicTacToe game;
     private Text currentPlayer, winner;
     private Player p;
-    private PieceActor[][]board = new PieceActor[3][3];
+    //SIZE CHANGED ----------------------------------------------------------------------
+    private PieceActor[][]board = new PieceActor[6][7];
     private Player youAre;
     //CONSTRUCTOR
     public TicTacToeStage(TicTacToeClient client, TicTacToe g, Player piece)
@@ -60,9 +61,9 @@ public class TicTacToeStage extends Stage
         // TODO: store each PieceActor in a 2d array instance variable
         int w = 100 + 5;
         int h = 100 + 5;
-        for(int r = 0; r < 3; r++)
+        for(int r = 0; r < 6; r++)
         {
-            for(int c = 0; c < 3; c++)
+            for(int c = 0; c < 7; c++)
             {
                 PieceActor pa = new PieceActor(client, r, c);
                 board[r][c] = pa;
