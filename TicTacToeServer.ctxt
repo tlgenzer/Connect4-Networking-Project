@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=TicTacToeServer
+comment1.params=port
+comment1.target=TicTacToeServer(int)
+comment2.params=id\ message
+comment2.target=void\ process(int,\ java.lang.String)
+comment2.text=\r\n\tDo\ something\ with\ a\ message\ sent\ from\ a\ client\r\n\r\n\tAllowed\ Messages\:\r\n\t\tplay\ row\ col\r\n
+comment3.params=id
+comment3.target=void\ onJoin(int)
+comment3.text=\r\n\tDo\ something\ when\ a\ client\ connects.\r\n\r\n\tFor\ every\ 2nd\ client\ that\ connects\:\r\n\t\t1.\ Create\ a\ new\ TicTacToe\ game\ for\ these\ clients\r\n\t\t2.\ Randomly\ assign\ each\ client\ X\ or\ O\r\n\t\t3.\ Assign\ clientId\ ->\ TicTacToe\ game\ in\ clientGames\ map\r\n
+comment4.params=id
+comment4.target=void\ onExit(int)
+comment4.text=\r\n\tDo\ something\ when\ a\ client\ disconnects\r\n\r\n\tEnd\ the\ game,\ make\ the\ other\ player\ the\ winner\!\r\n
+comment5.params=clientA\ clientB
+comment5.target=void\ endGame(int,\ int)
+numComments=6

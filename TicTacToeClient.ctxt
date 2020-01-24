@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=TicTacToeClient
+comment1.params=
+comment1.target=TicTacToeClient()
+comment2.params=message
+comment2.target=void\ process(java.lang.String)
+comment2.text=\r\n\ \ Messages\:\r\n\ \ \ \ \ \ youare\ [piece]\r\n\ \ \ \ \ \ addpiece\ [row]\ [col]\r\n\ \ \ \ \ \ winner\ disconnect\r\n\ \ \ \ \ \ error\ [message...]\r\n
+comment3.params=message
+comment3.target=void\ onDisconnect(java.lang.String)
+comment4.params=
+comment4.target=void\ onConnect()
+numComments=5
