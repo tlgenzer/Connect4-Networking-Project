@@ -24,7 +24,7 @@ public class PieceActor extends Actor
         this.col = col;
         c  = client;
         //Set this Actor's image. Blank pieces should display the blank.png image!
-        setPicture("img/empty.png");
+        setPicture("img/empty1.png");
     }
     
     //METHODS
@@ -48,11 +48,11 @@ public class PieceActor extends Actor
     {
         if(piece==Player.A)
         {
-            setPicture("img/x.png");
+            setPicture("img/x1.png");
         }
         if(piece==Player.B)
         {
-            setPicture("img/o.png");
+            setPicture("img/o1.png");
         }
         System.out.println("Setting piece " + row + ", " + col + " to " + piece);   //useful output for debugging
     }
