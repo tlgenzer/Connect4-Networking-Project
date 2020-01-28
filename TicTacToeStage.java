@@ -17,6 +17,8 @@ import java.awt.Color;
 public class TicTacToeStage extends Stage
 {
     //INSTANCE VARIABLES
+    private Win winStage;
+    private Lose loseStage;
     private TicTacToe game;
     private Text currentPlayer, winner;
     private Player p;
@@ -27,7 +29,8 @@ public class TicTacToeStage extends Stage
     public TicTacToeStage(TicTacToeClient client, TicTacToe g, Player piece)
     {
         //TODO: store parameters in instance variables
-
+        winStage = new Win();
+        loseStage = new Lose();
         setBackground("img/background2.png");
         youAre = piece;
         game = g;
@@ -89,11 +92,34 @@ public class TicTacToeStage extends Stage
 
             Player win = game.getWinner();
             if(win == Player.A)
+            {
                 winner.setText("X wins!");
+                if(youAre==Player.A)
+                {
+                    getMayflower().setStage(winStage);
+                }
+                else if(youAre!=Player.A)
+                {
+                    getMayflower().setStage(loseStage);
+                }
+                
+            }
+
             else if(win == Player.B)
+            {
                 winner.setText("O Wins!");
+            
+                if(youAre==Player.A)
+                {
+                    getMayflower().setStage(loseStage);
+                }
+                else if(youAre==Player.A)
+                {
+                    getMayflower().setStage(winStage);
+                }
+            }
             else
-                winner.setText("Tie Game!");
+            winner.setText("Tie Game!");
         }
         else
         {
