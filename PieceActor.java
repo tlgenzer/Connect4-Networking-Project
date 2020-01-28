@@ -35,10 +35,11 @@ public class PieceActor extends Actor
      */
     public void update()
     {
+        //should send lowest possible row
         if(isClicked())
         {
             c.send("play " + row + " " + col);
-           }
+        }
     }
     
     /*

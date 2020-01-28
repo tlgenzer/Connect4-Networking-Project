@@ -1,12 +1,12 @@
 public class TicTacToe implements ITicTacToe
 {
     //INSTANCE VARIABLES
-    Player[][]board = new Player[7][6];
+    Player[][]board;
 
     Player current;
     //CONSTRUCTORS
     public TicTacToe() 
-    {
+    {   board = new Player[7][6];
 
         current = Player.A;
     }
@@ -43,7 +43,11 @@ public class TicTacToe implements ITicTacToe
     {
         if(board[row][col]==null)
         {
-            board[row][col]=current;
+            int under = 0;
+            while(board[under+1][col] == null && under < 6){
+                under++;
+            }
+            board[under][col] = current;
         }
         return false;
     }

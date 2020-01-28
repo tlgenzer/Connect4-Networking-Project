@@ -82,6 +82,7 @@ public class TicTacToeServer extends Server
                     }
                     catch(Exception e)
                     {
+                        //here
                         send(id, "error invalid request: ["+message+"]");
                     }
                 }
