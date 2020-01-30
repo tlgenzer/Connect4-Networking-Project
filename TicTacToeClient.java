@@ -6,14 +6,14 @@ public class TicTacToeClient extends Client
 {
     private TicTacToeStage stage;
     private TicTacToe game;
-    private Player piece = null;
+    private Player piece ;
     public TicTacToeClient() 
     {
         Scanner in = new Scanner(System.in);
         System.out.println("Use localhost to connect to a server running on your computer.");
         System.out.print("IP Address > ");
-        String ip = in.next();
-        
+        //String ip = in.next();
+        String ip = "localhost";
         //System.out.print("Port > ");
         //int port = in.nextInt();
         int port = 1234;                //default server port
