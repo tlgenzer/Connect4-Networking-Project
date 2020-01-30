@@ -142,8 +142,8 @@ public class TicTacToeServer extends Server
                 xClients.add(clientA);
                 oClients.add(clientB);
 
-                send(clientA, "youare Green");
-                send(clientB, "youare Red");
+                send(clientA, "youare X");
+                send(clientB, "youare O");
             }
             else
             {

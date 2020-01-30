@@ -25,10 +25,14 @@ public class TicTacToeStage extends Stage
     //SIZE CHANGED ----------------------------------------------------------------------
     private PieceActor[][]board;
     private Player youAre;
+    Sound a;
+    Sound b;
     //CONSTRUCTOR
     public TicTacToeStage(TicTacToeClient client, TicTacToe g, Player piece)
     {
         //TODO: store parameters in instance variables
+        a = new Sound("sounds/nokia_arabic.wav");
+        a.loop();
         winStage = new Win();
         loseStage = new Lose();
         setBackground("img/background2.png");
@@ -37,7 +41,7 @@ public class TicTacToeStage extends Stage
         board = new PieceActor[6][7];
         if(piece==Player.A)
         {
-            System.out.println("g");
+            System.out.println("X");
             Text youarex = new Text("You are Green", Color.WHITE);
             addActor(youarex, 500, 0);
 
@@ -45,7 +49,7 @@ public class TicTacToeStage extends Stage
         if(piece==Player.B)
         {
 
-            System.out.println("r");
+            System.out.println("O");
             Text youareo = new Text("You are Red", Color.WHITE);
             addActor(youareo, 500, 0);
 
@@ -90,7 +94,7 @@ public class TicTacToeStage extends Stage
         if(game.isGameOver())
         {
             currentPlayer.setText("Game Over!");
-
+            a.stop();
             Player win = game.getWinner();
             if(win == Player.A)
             {
@@ -98,12 +102,15 @@ public class TicTacToeStage extends Stage
                 if(youAre==Player.A)
                 {
                     getMayflower().setStage(winStage);
+                    b = new Sound("sounds/win.wav");
+                    b.play();
                 }
                 else if(youAre!=Player.A)
                 {
                     getMayflower().setStage(loseStage);
+                    b = new Sound("sounds/lose.wav");
+                    b.play();
                 }
-                
             }
 
             else if(win == Player.B)
@@ -113,10 +120,14 @@ public class TicTacToeStage extends Stage
                 if(youAre==Player.A)
                 {
                     getMayflower().setStage(loseStage);
+                    b = new Sound("sounds/lose.wav");
+                    b.play();
                 }
                 else if(youAre!=Player.A)
                 {
                     getMayflower().setStage(winStage);
+                    b = new Sound("sounds/win.wav");
+                    b.play();
                 }
             }
             else

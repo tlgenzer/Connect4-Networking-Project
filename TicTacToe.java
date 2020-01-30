@@ -3,8 +3,8 @@ public class TicTacToe implements ITicTacToe
 {
     //INSTANCE VARIABLES
     Player[][]board;
-
     Player current;
+    Sound a;
     //CONSTRUCTORS
     public TicTacToe() 
     {   board = new Player[6][7];
@@ -44,7 +44,12 @@ public class TicTacToe implements ITicTacToe
     {
         if(board[row][col]==null)
         {
-            Sound a = new Sound("sounds/classic_hurt.wav");
+            if(current == Player.A){
+                a = new Sound("sounds/classic_hurt.wav");
+            }
+            else{
+                a = new Sound("sounds/hurt.wav");
+            }
             int under = 0;
             if(row==5){
                 while(board[row-under][col]!=null){
