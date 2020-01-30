@@ -22,6 +22,7 @@ public class buttonServer extends Actor
         if(this.isClicked())
         {
             new TicTacToeServer(1234);
+            setPicture("img/buttonServerD.png");
         }
     }
 }

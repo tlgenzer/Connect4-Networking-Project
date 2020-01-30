@@ -8,13 +8,15 @@ import java.awt.Color;
  */
 public class buttonConnect extends Actor
 {
-
+    Sound titleSound;
     /**
      * Constructor for objects of class buttonConnect
      */
     public buttonConnect()
     {
         setPicture("img/buttonConnect.png");
+        titleSound = new Sound("sounds/nokia_arabic.wav");
+        titleSound.loop();
     }
 
     public void update()
@@ -22,6 +24,8 @@ public class buttonConnect extends Actor
         if(this.isClicked())
         {
             new TicTacToeClient();
+            setPicture("img/buttonConnectD.png");
+            titleSound.stop();
         }
     }
 }
