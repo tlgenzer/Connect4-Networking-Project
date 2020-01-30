@@ -1,3 +1,4 @@
+import mayflower.*;
 public class TicTacToe implements ITicTacToe
 {
     //INSTANCE VARIABLES
@@ -43,6 +44,7 @@ public class TicTacToe implements ITicTacToe
     {
         if(board[row][col]==null)
         {
+            Sound a = new Sound("sounds/classic_hurt.wav");
             int under = 0;
             if(row==5){
                 while(board[row-under][col]!=null){
@@ -55,6 +57,7 @@ public class TicTacToe implements ITicTacToe
                 }
                 row = row-under;
                 board[row][col] = current;
+                a.play();
                 return row;
             }
             while(board[row+under][col]==null){
@@ -65,6 +68,7 @@ public class TicTacToe implements ITicTacToe
                     else{
                         row = row+under;
                         board[row][col] = current;
+                        a.play();
                         return row;
                     }
                 }
@@ -73,9 +77,11 @@ public class TicTacToe implements ITicTacToe
             row = row+under;
             if(board[row][col]!=null){
                 board[row-1][col] = current;
+                a.play();
                 return row-1;
             }
             board[row][col] = current;
+            a.play();
             return row;
         }
         return 0;

@@ -15,6 +15,8 @@ public class Title extends Stage
      */
     public Title()
     {
+        Sound a = new Sound("sounds/nokia_arabic.wav");
+        a.loop();
         setBackground("img/background2.png");
         addActor(new buttonConnect(), 250, 275);
         addActor(new buttonServer(), 550, 275);

@@ -37,16 +37,16 @@ public class TicTacToeStage extends Stage
         board = new PieceActor[6][7];
         if(piece==Player.A)
         {
-            System.out.println("x");
-            Text youarex = new Text("You are X", Color.WHITE);
+            System.out.println("g");
+            Text youarex = new Text("You are Green", Color.WHITE);
             addActor(youarex, 500, 0);
 
         }
         if(piece==Player.B)
         {
 
-            System.out.println("o");
-            Text youareo = new Text("You are O", Color.WHITE);
+            System.out.println("r");
+            Text youareo = new Text("You are Red", Color.WHITE);
             addActor(youareo, 500, 0);
 
         }
@@ -94,7 +94,7 @@ public class TicTacToeStage extends Stage
             Player win = game.getWinner();
             if(win == Player.A)
             {
-                winner.setText("X wins!");
+                winner.setText("Green wins!");
                 if(youAre==Player.A)
                 {
                     getMayflower().setStage(winStage);
@@ -108,7 +108,7 @@ public class TicTacToeStage extends Stage
 
             else if(win == Player.B)
             {
-                winner.setText("O Wins!");
+                winner.setText("Red Wins!");
             
                 if(youAre==Player.A)
                 {
@@ -126,9 +126,9 @@ public class TicTacToeStage extends Stage
         {
             Player curr = game.getCurrentPlayer();
             if(curr == Player.A)
-                currentPlayer.setText("It is X's turn");
+                currentPlayer.setText("It is Green's turn");
             else
-                currentPlayer.setText("It is O's turn");
+                currentPlayer.setText("It is Red's turn");
         }
     }
 
