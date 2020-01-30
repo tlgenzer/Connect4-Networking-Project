@@ -14,7 +14,7 @@ public class buttonServer extends Actor
      */
     public buttonServer()
     {
-        setPicture("img/test.png");
+        setPicture("img/buttonServer.png");
     }
 
     public void update()
