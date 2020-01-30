@@ -13,6 +13,7 @@ public class Lose extends Stage
     /**
      * Constructor for objects of class Lose
      */
+    //sets the background to the lose screen
     public Lose()
     {
         setBackground("img/lose.png");
