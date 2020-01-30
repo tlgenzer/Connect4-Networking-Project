@@ -14,7 +14,7 @@ public interface ITicTacToe
      *	Add the current player's piece to the board at the specified row,col and return true
      *	If there is already a piece at that location, do not add the piece and return false
      */
-    public boolean addPiece(int row, int col);
+    public int addPiece(int row, int col);
     
     /*
      *	Return the piece that is located at the specified row, col

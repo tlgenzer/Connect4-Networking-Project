@@ -74,9 +74,10 @@ public class TicTacToeClient extends Client
             //1. add a piece to the game at the specified (row, col)
             //2. tell the game it is the next player's turn
             //3. tell the stage to update the piece at (row, col) to the correct type (X or O) depending on which piece was just added to (row, col)
-            game.addPiece(row, col);
+            int wha = game.addPiece(row, col);
             game.nextPlayer();
-            stage.updatePiece(game.getPiece(row,col), row, col);
+            //this
+            stage.updatePiece(game.getPiece(wha,col), wha, col);
             
         }
         else if("error".equals(parts[0]))

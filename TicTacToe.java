@@ -6,7 +6,7 @@ public class TicTacToe implements ITicTacToe
     Player current;
     //CONSTRUCTORS
     public TicTacToe() 
-    {   board = new Player[7][6];
+    {   board = new Player[6][7];
 
         current = Player.A;
     }
@@ -39,17 +39,46 @@ public class TicTacToe implements ITicTacToe
      *  Add the specified piece to the board at the specified row,col and return true
      *  If there is already a piece at that location, do not add the piece and return false
      */
-    public boolean addPiece(int row, int col)
+    public int addPiece(int row, int col)
     {
         if(board[row][col]==null)
         {
             int under = 0;
-            while(board[under+1][col] == null && under < 6){
+            if(row==5){
+                while(board[row-under][col]!=null){
+                    if(row-under == 0){
+                        if(board[row-under][col] !=null){
+                            return 0;
+                        }
+                    }
+                    under++;
+                }
+                row = row-under;
+                board[row][col] = current;
+                return row;
+            }
+            while(board[row+under][col]==null){
+                if(row+under==5){
+                    if(board[row+under][col]!=null){
+                        return 0;
+                    }
+                    else{
+                        row = row+under;
+                        board[row][col] = current;
+                        return row;
+                    }
+                }
                 under++;
             }
-            board[under][col] = current;
+            row = row+under;
+            if(board[row][col]!=null){
+                board[row-1][col] = current;
+                return row-1;
+            }
+            board[row][col] = current;
+            return row;
         }
-        return false;
+        return 0;
     }
 
     /*
@@ -67,9 +96,9 @@ public class TicTacToe implements ITicTacToe
      */
     public boolean hasEmptySpace()
     {
-        for(int i=6; i>=0;i--)
+        for(int i=5; i>=0;i--)
         {
-            for(int j=5; j>=0;j--)
+            for(int j=6; j>=0;j--)
             {
                 if(board[i][j]==null)
                 {
@@ -86,21 +115,36 @@ public class TicTacToe implements ITicTacToe
      */
     public Player getWinner()
     {
-        if(checkRowsForWinner()!=null)
+        if(checkForWin()!=null)
         {
-            return checkRowsForWinner();
+            return checkForWin();
         }
-        if(checkColsForWinner()!=null)
-        {
-            return checkColsForWinner();
-        }
-        if(checkDiagsForWinner()!=null)
-        {
-            return checkDiagsForWinner();
-        }
-        if(!hasEmptySpace())
-        {
-            return null;
+        return null;
+    }
+
+    public Player checkForWin(){
+        for(int r = 0; r<board.length; r++){
+            for(int c = 0; c<board[0].length; c++){
+                Player cur = board[r][c];
+                if(cur!=null){
+                    if(c <= board[0].length-4 && cur == board[r][c+1] && cur == board[r][c+2] && cur == board[r][c+3]){
+                        return cur;
+                    }
+                    if(r <= board.length-4 && cur == board[r+1][c] && cur == board[r+2][c] && cur == board[r+3][c]){
+                        return cur;
+                    }
+                    if(r <= board.length-4 && c <= board[0].length-4){
+                        if(cur == board[r+1][c+1] && cur == board[r+2][c+2] && cur == board[r+3][c+3]){
+                            return cur;
+                        }
+                    }
+                    if(r <= board.length-4 && c >= board[0].length-4){
+                        if(cur == board[r+1][c-1] && cur == board[r+2][c-2] && cur == board[r+3][c-3]){
+                            return cur;
+                        }
+                    }
+                }
+            }
         }
         return null;
     }

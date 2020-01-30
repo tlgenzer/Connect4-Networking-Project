@@ -23,7 +23,7 @@ public class TicTacToeStage extends Stage
     private Text currentPlayer, winner;
     private Player p;
     //SIZE CHANGED ----------------------------------------------------------------------
-    private PieceActor[][]board = new PieceActor[7][6];
+    private PieceActor[][]board;
     private Player youAre;
     //CONSTRUCTOR
     public TicTacToeStage(TicTacToeClient client, TicTacToe g, Player piece)
@@ -34,6 +34,7 @@ public class TicTacToeStage extends Stage
         setBackground("img/background2.png");
         youAre = piece;
         game = g;
+        board = new PieceActor[6][7];
         if(piece==Player.A)
         {
             System.out.println("x");
@@ -64,13 +65,13 @@ public class TicTacToeStage extends Stage
         // TODO: store each PieceActor in a 2d array instance variable
         int w = 50 + 30;
         int h = 50 + 30;
-        for(int r = 0; r < 7; r++)
+        for(int r = 0; r < 6; r++)
         {
-            for(int c = 0; c < 6; c++)
+            for(int c = 0; c < 7; c++)
             {
                 PieceActor pa = new PieceActor(client, r, c);
                 board[r][c] = pa;
-                addActor(pa, r*w+40, c*h+100);
+                addActor(pa, c*h+40, r*w+100);
             }
         }
     }
@@ -113,7 +114,7 @@ public class TicTacToeStage extends Stage
                 {
                     getMayflower().setStage(loseStage);
                 }
-                else if(youAre==Player.A)
+                else if(youAre!=Player.A)
                 {
                     getMayflower().setStage(winStage);
                 }
