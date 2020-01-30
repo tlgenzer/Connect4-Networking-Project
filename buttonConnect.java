@@ -14,7 +14,7 @@ public class buttonConnect extends Actor
      */
     public buttonConnect()
     {
-        setPicture("img/test.png");
+        setPicture("img/buttonConnect.png");
     }
 
     public void update()
