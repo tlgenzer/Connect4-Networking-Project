@@ -23,7 +23,7 @@ public class buttonConnect extends Actor
     {
         if(this.isClicked())
         {
-            new TicTacToeClient();
+            new Connect4Client();
             setPicture("img/buttonConnectD.png");
             titleSound.stop();
         }

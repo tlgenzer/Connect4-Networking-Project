@@ -7,19 +7,19 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 
-public class TicTacToeServer extends Server
+public class Connect4Server extends Server
 {
     private Queue<Integer> clientsWaitingForGame;
-    private Map<Integer, TicTacToe> games;
+    private Map<Integer, Connect4> games;
     private Map<Integer, Integer> otherPlayer;
     private Set<Integer> xClients, oClients;
 
-    public TicTacToeServer(int port)
+    public Connect4Server(int port)
     {
         super(port);
 
         clientsWaitingForGame = new LinkedList<Integer>();
-        games = new HashMap<Integer, TicTacToe>();
+        games = new HashMap<Integer, Connect4>();
         otherPlayer = new HashMap<Integer, Integer>();
         xClients = new HashSet<Integer>();
         oClients = new HashSet<Integer>();
@@ -37,7 +37,7 @@ public class TicTacToeServer extends Server
     {
         System.out.println("Message from client " +id+ ": " + message);
         //get this client's game
-        TicTacToe game = games.get(id);
+        Connect4 game = games.get(id);
 
         //check if client is in a game and if that game is not over
         if(game != null && !game.isGameOver())
@@ -128,7 +128,7 @@ public class TicTacToeServer extends Server
             otherPlayer.put(clientB, clientA);
 
             //create TicTacToe game and mapping from clients -> game
-            TicTacToe game = new TicTacToe();
+            Connect4 game = new Connect4();
             games.put(clientA, game);
             games.put(clientB, game);
 
@@ -171,7 +171,7 @@ public class TicTacToeServer extends Server
         }
 
         //check if this player is already in a game
-        TicTacToe game = games.get(id);
+        Connect4 game = games.get(id);
         if(game != null)
         {
             //tell the other player that they win!

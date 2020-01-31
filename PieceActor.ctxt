@@ -2,7 +2,7 @@
 comment0.target=PieceActor
 comment0.text=\r\n\ \ 1.\ Store\ the\ TicTacToeClient\ constructor\ parameter\ in\ an\ instance\ variable\r\n\ \ 2.\ The\ update\ method\ should\ check\ if\ this\ piece\ is\ clicked\ and\ then\ send\ a\ request\ to\ "play\ [row]\ [col]"\ to\ the\ server\r\n\ \ 3.\ Implement\ the\ setPiece\ method\ to\ change\ the\ picture\ this\ PieceActor\ is\ displaying\r\n
 comment1.params=client\ row\ col
-comment1.target=PieceActor(TicTacToeClient,\ int,\ int)
+comment1.target=PieceActor(Connect4Client,\ int,\ int)
 comment2.params=
 comment2.target=void\ update()
 comment2.text=\r\n\ \ Checks\ if\ this\ piece\ is\ clicked\ using\ the\ isClicked()\ method\r\n\ \ If\ it\ is\ clicked\ then\:\r\n\ \ \ \ \ \ 1.\ Send\ a\ request\ to\ the\ server\ to\ "play\ [row]\ [col]"\r\n

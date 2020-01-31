@@ -11,11 +11,11 @@ public class PieceActor extends Actor
 {
     //INSTANCE VARIABLES
     int row, col;
-    TicTacToeClient c;
+    Connect4Client c;
     
     //CONSTRUCTOR
     //NEW
-    public PieceActor(TicTacToeClient client, int row, int col) 
+    public PieceActor(Connect4Client client, int row, int col) 
     {
         //TODO: store the client parameter in an instance variable
         

@@ -1,7 +1,7 @@
 #BlueJ class context
-comment0.target=TicTacToeServer
+comment0.target=Connect4Server
 comment1.params=port
-comment1.target=TicTacToeServer(int)
+comment1.target=Connect4Server(int)
 comment2.params=id\ message
 comment2.target=void\ process(int,\ java.lang.String)
 comment2.text=\r\n\tDo\ something\ with\ a\ message\ sent\ from\ a\ client\r\n\r\n\tAllowed\ Messages\:\r\n\t\tplay\ row\ col\r\n

@@ -1,8 +1,8 @@
 #BlueJ class context
-comment0.target=TicTacToeStage
+comment0.target=Connect4Stage
 comment0.text=\r\n\ \ 1.\ Remember\ the\ following\ information\:\r\n\ \ \ \ \ \ -\ the\ TicTacToePiece\ that\ is\ passed\ as\ a\ parameter\ to\ the\ constructor\ (this\ is\ your\ piece)\r\n\ \ \ \ \ \ -\ all\ of\ the\ PieceActor\ objects\ in\ a\ 2d\ array\ so\ they\ can\ be\ referenced\ in\ other\ methods\r\n\ \ 2.\ Instead\ of\ creating\ a\ new\ TicTacToe\ game\ in\ the\ constructor,\ just\ remember\ the\ TicTacToe\ game\ that\ was\ passed\ as\ a\ parameter\r\n\ \ 3.\ Implement\ the\ updatePiece\ method\ that\ tells\ the\ PieceActor\ at\ (row,\ col)\ to\ update\ itself\ to\ display\ the\ appropriate\ piece\ (X\ or\ O)\r\n\ \ 4.\ Change\ the\ if/else\ condition\ in\ update\ so\ that\ it\ displays\ "Your\ turn"\ and\ "Waiting\ for\ opponent"\ instead\ of\ "It\ is\ X's\ turn"\ and\ "It\ is\ O's\ turn"\r\n\ \ 5.\ Change\ the\ if/else\ condition\ in\ update\ so\ that\ it\ displays\ "You\ win\!"\ and\ "You\ lose."\ instead\ of\ "X\ wins\!"\ and\ "O\ wins\!"\r\n
 comment1.params=client\ g\ piece
-comment1.target=TicTacToeStage(TicTacToeClient,\ TicTacToe,\ Player)
+comment1.target=Connect4Stage(Connect4Client,\ Connect4,\ Player)
 comment2.params=
 comment2.target=void\ update()
 comment2.text=\r\n\ \ Check\ if\ the\ game\ is\ over\r\n\ \ \ \ \ \ If\ the\ game\ is\ over,\ display\ the\ text\ "Game\ Over\!"\ on\ the\ screen\r\n\ \ \ \ \ \ If\ there\ is\ a\ winner,\ display\ the\ text\ "You\ win\!"\ or\ "You\ lose."\ on\ the\ screen\r\n\ \ \ \ \ \ If\ there\ is\ not\ a\ winner,\ display\ the\ text\ "Tie\ Game\!"\ on\ the\ screen\r\n\ \ If\ the\ game\ is\ NOT\ over\r\n\ \ \ \ \ \ Display\ the\ current\ player's\ turn\ on\ the\ screen\:\ "It\ your\ turn"\ or\ "Waiting\ for\ opponent."\r\n

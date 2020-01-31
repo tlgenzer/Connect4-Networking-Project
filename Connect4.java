@@ -1,12 +1,12 @@
 import mayflower.*;
-public class TicTacToe implements ITicTacToe
+public class Connect4
 {
     //INSTANCE VARIABLES
     Player[][]board;
     Player current;
     Sound a;
     //CONSTRUCTORS
-    public TicTacToe() 
+    public Connect4() 
     {   board = new Player[6][7];
 
         current = Player.A;

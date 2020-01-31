@@ -2,12 +2,12 @@ import mayflower.*;
 import mayflower.net.*;
 import java.util.Scanner;
 import java.awt.Color;
-public class TicTacToeClient extends Client
+public class Connect4Client extends Client
 {
-    private TicTacToeStage stage;
-    private TicTacToe game;
+    private Connect4Stage stage;
+    private Connect4 game;
     private Player piece ;
-    public TicTacToeClient() 
+    public Connect4Client() 
     {
         Scanner in = new Scanner(System.in);
         System.out.println("Use localhost to connect to a server running on your computer.");
@@ -60,8 +60,8 @@ public class TicTacToeClient extends Client
             {
               piece = Player.B;
             }
-            game = new TicTacToe();
-            stage = new TicTacToeStage(this, game, piece);
+            game = new Connect4();
+            stage = new Connect4Stage(this, game, piece);
             new Mayflower("Rock Scissors Paper",800, 600, stage);
         }
         else if("addpiece".equals(parts[0]))

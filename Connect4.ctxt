@@ -1,7 +1,7 @@
 #BlueJ class context
-comment0.target=TicTacToe
+comment0.target=Connect4
 comment1.params=
-comment1.target=TicTacToe()
+comment1.target=Connect4()
 comment10.params=a\ b\ c
 comment10.target=Player\ checkForWinner(Player,\ Player,\ Player)
 comment10.text=\r\n\ \ If\ a,\ b,\ and\ c\ are\ all\ the\ same\ TicTacToe\ piece,\ then\ return\ that\ piece\r\n\ \ Otherwise,\ return\ null\r\n

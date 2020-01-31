@@ -14,12 +14,12 @@ import java.awt.Color;
  *  5. Change the if/else condition in update so that it displays "You win!" and "You lose." instead of "X wins!" and "O wins!"
  */
 
-public class TicTacToeStage extends Stage
+public class Connect4Stage extends Stage
 {
     //INSTANCE VARIABLES
     private Win winStage;
     private Lose loseStage;
-    private TicTacToe game;
+    private Connect4 game;
     private Text currentPlayer, winner;
     private Player p;
     //SIZE CHANGED ----------------------------------------------------------------------
@@ -28,7 +28,7 @@ public class TicTacToeStage extends Stage
     Sound a;
     Sound b;
     //CONSTRUCTOR
-    public TicTacToeStage(TicTacToeClient client, TicTacToe g, Player piece)
+    public Connect4Stage(Connect4Client client, Connect4 g, Player piece)
     {
         //TODO: store parameters in instance variables
         a = new Sound("sounds/nokia_arabic.wav");
@@ -41,7 +41,7 @@ public class TicTacToeStage extends Stage
         board = new PieceActor[6][7];
         if(piece==Player.A)
         {
-            System.out.println("X");
+            System.out.println("A");
             Text youarex = new Text("You are Green", Color.WHITE);
             addActor(youarex, 500, 0);
 
@@ -49,7 +49,7 @@ public class TicTacToeStage extends Stage
         if(piece==Player.B)
         {
 
-            System.out.println("O");
+            System.out.println("B");
             Text youareo = new Text("You are Red", Color.WHITE);
             addActor(youareo, 500, 0);
 
