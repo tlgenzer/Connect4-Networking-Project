@@ -13,7 +13,7 @@ public class Win extends Stage
     /**
      * Constructor for objects of class Win
      */
-    //sets the background to the win screen when it is called
+    //sets the background to the win screen
     public Win()
     {
         setBackground("img/win.png");

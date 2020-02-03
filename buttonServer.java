@@ -16,7 +16,7 @@ public class buttonServer extends Actor
     {
         setPicture("img/buttonServer.png");
     }
-
+    //opens server when button is clicked
     public void update()
     {
         if(this.isClicked())
