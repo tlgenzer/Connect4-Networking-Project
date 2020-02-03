@@ -18,7 +18,7 @@ public class Connect4Server extends Server
     public Connect4Server(int port)
     {
         super(port);
-
+        
         clientsWaitingForGame = new LinkedList<Integer>();
         games = new HashMap<Integer, Connect4>();
         otherPlayer = new HashMap<Integer, Integer>();
@@ -29,10 +29,10 @@ public class Connect4Server extends Server
     }
 
     /*
-     *	Do something with a message sent from a client
+     *  Do something with a message sent from a client
      *
-     *	Allowed Messages:
-     *		play row col
+     *  Allowed Messages:
+     *      play row col
      */
     public void process(int id, String message)
     {
@@ -104,12 +104,12 @@ public class Connect4Server extends Server
     }
 
     /*
-     *	Do something when a client connects.
+     *  Do something when a client connects.
      *
-     *	For every 2nd client that connects:
-     *		1. Create a new TicTacToe game for these clients
-     *		2. Randomly assign each client X or O
-     *		3. Assign clientId -> TicTacToe game in clientGames map
+     *  For every 2nd client that connects:
+     *      1. Create a new TicTacToe game for these clients
+     *      2. Randomly assign each client X or O
+     *      3. Assign clientId -> TicTacToe game in clientGames map
      */
     public void onJoin(int id)
     {
@@ -158,9 +158,9 @@ public class Connect4Server extends Server
     }
 
     /*
-     *	Do something when a client disconnects
+     *  Do something when a client disconnects
      *
-     *	End the game, make the other player the winner!
+     *  End the game, make the other player the winner!
      */
     public void onExit(int id)
     {
@@ -189,7 +189,7 @@ public class Connect4Server extends Server
         disconnect(clientB);
 
         //remove the data associated with these clients from data structures:
-        //otherPlayer, games, xClients, oClients		
+        //otherPlayer, games, xClients, oClients        
         otherPlayer.remove(clientA);
         otherPlayer.remove(clientB);
 

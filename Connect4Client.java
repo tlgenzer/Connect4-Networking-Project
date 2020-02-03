@@ -7,18 +7,20 @@ public class Connect4Client extends Client
     private Connect4Stage stage;
     private Connect4 game;
     private Player piece ;
-    public Connect4Client() 
+    public Connect4Client(buttonConnect a) 
     {
         Scanner in = new Scanner(System.in);
         System.out.println("Use localhost to connect to a server running on your computer.");
         System.out.print("IP Address > ");
         //String ip = in.next();
         String ip = "localhost";
+        if(a.getPress()!=true){
+            ip = "10.11.22.140";
+        }
         //String ip = 10.11.22.140
         //System.out.print("Port > ");
         //int port = in.nextInt();
         int port = 1234;                //default server port
-        
         System.out.println("Connecting...");
         connect(ip, port);          //connect to the server at the specified ip and port
     }

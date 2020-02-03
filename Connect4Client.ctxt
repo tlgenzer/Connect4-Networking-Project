@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Connect4Client
-comment1.params=
-comment1.target=Connect4Client()
+comment1.params=a
+comment1.target=Connect4Client(buttonConnect)
 comment2.params=message
 comment2.target=void\ process(java.lang.String)
 comment2.text=\r\n\ \ Messages\:\r\n\ \ \ \ \ \ youare\ [piece]\r\n\ \ \ \ \ \ addpiece\ [row]\ [col]\r\n\ \ \ \ \ \ winner\ disconnect\r\n\ \ \ \ \ \ error\ [message...]\r\n
