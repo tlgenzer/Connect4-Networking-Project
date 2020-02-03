@@ -14,6 +14,7 @@ public class Connect4Client extends Client
         System.out.print("IP Address > ");
         //String ip = in.next();
         String ip = "localhost";
+        //String ip = 10.11.22.140
         //System.out.print("Port > ");
         //int port = in.nextInt();
         int port = 1234;                //default server port
@@ -21,7 +22,6 @@ public class Connect4Client extends Client
         System.out.println("Connecting...");
         connect(ip, port);          //connect to the server at the specified ip and port
     }
-    
     /*
      *  Messages:
      *      youare [piece]
