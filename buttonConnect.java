@@ -15,7 +15,7 @@ public class buttonConnect extends Actor
     public buttonConnect()
     {
         setPicture("img/buttonConnect.png");
-        titleSound = new Sound("sounds/nokia_arabic.wav");
+        titleSound = new Sound("sounds/title.wav");
         titleSound.loop();
     }
 
