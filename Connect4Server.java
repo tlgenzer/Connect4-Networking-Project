@@ -13,7 +13,8 @@ public class Connect4Server extends Server
     private Map<Integer, Connect4> games;
     private Map<Integer, Integer> otherPlayer;
     private Set<Integer> xClients, oClients;
-
+//instantializes a server by calling the server class, and creating storage for games in 
+//progress, clients that want in a game, and the other player.
     public Connect4Server(int port)
     {
         super(port);

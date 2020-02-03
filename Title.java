@@ -9,6 +9,8 @@ import java.awt.Color;
  */
 public class Title extends Stage
 {
+    //creates a background, 2 buttons, and starts playing music
+    Sound a;
     /**
      * Constructor for objects of class Title
      */
