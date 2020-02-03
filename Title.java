@@ -9,7 +9,6 @@ import java.awt.Color;
  */
 public class Title extends Stage
 {
-    Sound a;
     /**
      * Constructor for objects of class Title
      */
