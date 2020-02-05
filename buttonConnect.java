@@ -67,7 +67,6 @@ public class buttonConnect extends Actor
             titleSound.stop();
             isPressed=true;
             System.out.println("Use localhost to connect to a server running on your computer.");
-            System.out.println("Press p For Backslash");
             System.out.println("Press l For localhost");
         }
         if(isPressed==true){
@@ -81,16 +80,16 @@ public class buttonConnect extends Actor
             }
             for(int i = 0; i<10; i++){
                 if(getKeyboard().isKeyReleased(curkey) || curkey==null){
-                    if(getKeyboard().isKeyPressed("" + i) || getKeyboard().isKeyPressed("period") || getKeyboard().isKeyPressed("p")){
+                    if(getKeyboard().isKeyPressed("" + i) || getKeyboard().isKeyPressed("period") || getKeyboard().isKeyPressed("backspace")){
                         if(getKeyboard().isKeyPressed("period")){
                             ip += ".";
                             add = ".";
                             curkey = "period";
                         }
-                        else if(getKeyboard().isKeyPressed("p")){
+                        else if(getKeyboard().isKeyPressed("backspace")){
                             if(ip.length()>0){
                                 ip = ip.substring(0, ip.length()-1);
-                                curkey = "p";
+                                curkey = "backspace";
                             }
                         }
                         else{
