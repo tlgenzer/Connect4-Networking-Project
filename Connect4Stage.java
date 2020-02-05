@@ -27,6 +27,7 @@ public class Connect4Stage extends Stage
     private Player youAre;
     Sound a;
     Sound b;
+    Spin spinn;
     //CONSTRUCTOR
     public Connect4Stage(Connect4Client client, Connect4 g, Player piece)
     {
@@ -36,6 +37,8 @@ public class Connect4Stage extends Stage
         winStage = new Win();
         loseStage = new Lose();
         setBackground("img/back.png");
+        spinn = new Spin();
+        addActor(spinn, 750, 50);
         youAre = piece;
         game = g;
         board = new PieceActor[6][7];
@@ -139,10 +142,14 @@ public class Connect4Stage extends Stage
         else
         {
             Player curr = game.getCurrentPlayer();
-            if(curr == Player.A)
+            if(curr == Player.A){
+                spinn.setPicture("img/x1.png");
                 currentPlayer.setText("It is Green's turn");
-            else
+            }
+            else{
+                spinn.setPicture("img/o1.png");
                 currentPlayer.setText("It is Red's turn");
+            }
         }
     }
 
