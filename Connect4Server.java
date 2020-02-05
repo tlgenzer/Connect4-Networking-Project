@@ -24,7 +24,6 @@ public class Connect4Server extends Server
         otherPlayer = new HashMap<Integer, Integer>();
         xClients = new HashSet<Integer>();
         oClients = new HashSet<Integer>();
-
         System.out.println("Waiting for clients on port " + getPort() + " at " + getIP());
     }
 

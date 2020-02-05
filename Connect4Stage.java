@@ -132,6 +132,7 @@ public class Connect4Stage extends Stage
             }
             else
             winner.setText("Tie Game!");
+            getMayflower().setStage(new Tie());
         }
         else
         {
