@@ -35,7 +35,7 @@ public class Connect4Stage extends Stage
         a.loop();
         winStage = new Win();
         loseStage = new Lose();
-        setBackground("img/background2.png");
+        setBackground("img/back.png");
         youAre = piece;
         game = g;
         board = new PieceActor[6][7];
@@ -132,7 +132,9 @@ public class Connect4Stage extends Stage
             }
             else
             winner.setText("Tie Game!");
-            getMayflower().setStage(new Tie());
+            if(game.hasEmptySpace()==false){
+                getMayflower().setStage(new Tie());
+            }
         }
         else
         {

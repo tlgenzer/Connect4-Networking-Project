@@ -23,11 +23,11 @@ public class Title extends Stage
     {
         Connect4Server s = new Connect4Server(1235);
         test = new Text(""+s.getIP(), Color.WHITE);
-        addActor(test, 175, 150);
+        addActor(test, 175, 300);
         ip = new Text("", Color.WHITE);
         con = new Text("", Color.WHITE);
         addActor(con, 225, 200);
-        addActor(ip, 175, 200);
+        addActor(ip, 175, 350);
         b = new buttonConnect();
         setBackground("img/background2.png");
         addActor(b, 250, 450);
