@@ -1,6 +1,7 @@
 import mayflower.*;
+import mayflower.net.*;
 import java.awt.Color;
-
+import java.net.InetAddress;
 /**
  * Write a description of class Title here.
  *
@@ -14,11 +15,15 @@ public class Title extends Stage
     Sound a;
     Text ip;
     Text con;
+    Text test;
     /**
      * Constructor for objects of class Title
      */
     public Title()
     {
+        Connect4Server s = new Connect4Server(1235);
+        test = new Text(""+s.getIP(), Color.WHITE);
+        addActor(test, 175, 150);
         ip = new Text("", Color.WHITE);
         con = new Text("", Color.WHITE);
         addActor(con, 225, 200);
@@ -27,8 +32,6 @@ public class Title extends Stage
         setBackground("img/background2.png");
         addActor(b, 250, 450);
         addActor(new buttonServer(), 550, 450);
-    }
-    public void add(){
         
     }
     public void update()
